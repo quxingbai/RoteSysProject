@@ -1,0 +1,350 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1BE5B7F-9A8A-4C11-8351-D737E84FC40B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoteSysProject</RootNamespace>
+    <AssemblyName>RoteSysProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Controls.css" />
+    <Content Include="Form\ActionAdd.aspx" />
+    <Content Include="Form\ActionInfo.aspx" />
+    <Content Include="Form\ActionUpdate.aspx" />
+    <Content Include="Form\AddRoteUseer.aspx" />
+    <Content Include="Form\Login.aspx" />
+    <Content Include="Form\RootControl.aspx" />
+    <Content Include="Form\RoteInfoSelect.aspx" />
+    <Content Include="Form\RoteUserInfo.aspx" />
+    <Content Include="Form\RoteUserSelect.aspx" />
+    <Content Include="Form\RoteUserUpdate.aspx" />
+    <Content Include="Form\UserControl.aspx" />
+    <Content Include="Form\UsersAdd.aspx" />
+    <Content Include="Form\UsersUpdate.aspx" />
+    <Content Include="ImageResource\img1.jpg" />
+    <Content Include="JS\artDialog4.1.6\artDialog.js" />
+    <Content Include="JS\artDialog4.1.6\skins\aero.css" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\aero_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\aero_s2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="JS\artDialog4.1.6\skins\aero\ie6\aui_w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black.css" />
+    <Content Include="JS\artDialog4.1.6\skins\black\bg.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\bg2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\bg_css3.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\bg_css3_2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\black\ie6\w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue.css" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\bg.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\bg2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\bg_css3.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\bg_css3_2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\blue\ie6\w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\chrome.css" />
+    <Content Include="JS\artDialog4.1.6\skins\chrome\border.png" />
+    <Content Include="JS\artDialog4.1.6\skins\chrome\chrome_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\default.css" />
+    <Content Include="JS\artDialog4.1.6\skins\green.css" />
+    <Content Include="JS\artDialog4.1.6\skins\green\bg.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\bg2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\bg_css3.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\bg_css3_2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\color_bg.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\green\ie6\w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\error.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\face-sad.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\face-smile.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\loading.gif" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\question.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\succeed.png" />
+    <Content Include="JS\artDialog4.1.6\skins\icons\warning.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog.css" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\idialog_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\idialog_s2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\idialog\ie6\aui_w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera.css" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_close.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_e.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_n.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_ne.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_nw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_s.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_se.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_sw.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\ie6\aui_w.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\s1.png" />
+    <Content Include="JS\artDialog4.1.6\skins\opera\s2.png" />
+    <Content Include="JS\artDialog4.1.6\skins\simple.css" />
+    <Content Include="JS\artDialog4.1.6\skins\twitter.css" />
+    <Content Include="JS\jquery-1.11.3.js" />
+    <Content Include="JS\Tool.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\ActionAdd.aspx.cs">
+      <DependentUpon>ActionAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\ActionAdd.aspx.designer.cs">
+      <DependentUpon>ActionAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ActionInfo.aspx.cs">
+      <DependentUpon>ActionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\ActionInfo.aspx.designer.cs">
+      <DependentUpon>ActionInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ActionUpdate.aspx.cs">
+      <DependentUpon>ActionUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\ActionUpdate.aspx.designer.cs">
+      <DependentUpon>ActionUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddRoteUseer.aspx.cs">
+      <DependentUpon>AddRoteUseer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\AddRoteUseer.aspx.designer.cs">
+      <DependentUpon>AddRoteUseer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RootControl.aspx.cs">
+      <DependentUpon>RootControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\RootControl.aspx.designer.cs">
+      <DependentUpon>RootControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RoteInfoSelect.aspx.cs">
+      <DependentUpon>RoteInfoSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\RoteInfoSelect.aspx.designer.cs">
+      <DependentUpon>RoteInfoSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RoteUserInfo.aspx.cs">
+      <DependentUpon>RoteUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\RoteUserInfo.aspx.designer.cs">
+      <DependentUpon>RoteUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RoteUserSelect.aspx.cs">
+      <DependentUpon>RoteUserSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\RoteUserSelect.aspx.designer.cs">
+      <DependentUpon>RoteUserSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RoteUserUpdate.aspx.cs">
+      <DependentUpon>RoteUserUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\RoteUserUpdate.aspx.designer.cs">
+      <DependentUpon>RoteUserUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserControl.aspx.cs">
+      <DependentUpon>UserControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UserControl.aspx.designer.cs">
+      <DependentUpon>UserControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UsersAdd.aspx.cs">
+      <DependentUpon>UsersAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UsersAdd.aspx.designer.cs">
+      <DependentUpon>UsersAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UsersUpdate.aspx.cs">
+      <DependentUpon>UsersUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UsersUpdate.aspx.designer.cs">
+      <DependentUpon>UsersUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\WebFormTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AddAction.ashx.cs">
+      <DependentUpon>AddAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Login.ashx.cs">
+      <DependentUpon>Login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Tool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Service\Login.ashx" />
+    <Content Include="Service\AddAction.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoteSysProject.BLL\RoteSysProject.BLL.csproj">
+      <Project>{f1977ee6-3472-4bea-9bd1-e28e84edb2ad}</Project>
+      <Name>RoteSysProject.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoteSysProject.Model\RoteSysProject.Model.csproj">
+      <Project>{2da1fd90-f8a2-4760-952d-e6c7d670d36a}</Project>
+      <Name>RoteSysProject.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53974</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53974/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

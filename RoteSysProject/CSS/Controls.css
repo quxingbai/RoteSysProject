@@ -1,0 +1,32 @@
+﻿input{
+    outline:none;
+}
+.BlockTextBox {
+    border: solid;
+    background-color: rgba(255, 255, 255, 0.67);
+    min-width: 173px;
+    min-height: 25px;
+}
+.BlockButton:focus {
+    background-color: rgba(255, 255, 255, 0.31);
+    border-color: #00fff7;
+}
+.BlockTextBox:focus{
+    background-color:rgba(255, 255, 255, 0.31);
+    border-color:#0094ff;
+}
+.BlockButton {
+    border: solid;
+    background-color: rgba(255, 255, 255, 0.67);
+    min-width: 179px;
+    min-height: 35px;
+}
+.BlockListBox {
+    border: solid;
+    background-color: rgba(255, 255, 255, 0.67);
+    min-width: 179px;
+    min-height: 35px;
+}
+.BlockListBox :hover{
+  border-color:black;
+}
