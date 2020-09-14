@@ -45,6 +45,7 @@
                         <td>
                             <asp:Button runat="server" Text="删除" CommandArgument='<%#Eval("UID") %>' CommandName="DELETE" CssClass="BlockButton" />
                             <asp:Button runat="server" Text="修改" CommandArgument='<%#Eval("UID") %>' CommandName="UPDATE" CssClass="BlockButton" />
+                            <asp:Button runat="server" Text="随机密码" CommandArgument='<%#Eval("UID") %>' CommandName="RANDOM_UPDATEPASSWORD" CssClass="BlockButton" />
                         </td>
                     </tr>
                 </ItemTemplate>

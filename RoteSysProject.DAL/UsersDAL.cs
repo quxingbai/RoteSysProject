@@ -26,7 +26,14 @@ namespace  RoteSysProject.DAL
             String sql = "DELETE  Users WHERE UID=" + ID;
             return DataBaseOpen.NoQuery(sql);
         }
-
+        public int UpdatePasswordByID(UsersModel Model)
+        {
+            String sql = "UPDATE Users SET uPwd=@uPwd WHERE UID=@UID";
+            return DataBaseOpen.NoQuery(sql, new SqlParameter[] {
+                new SqlParameter("@uPwd",Model.uPwd),
+                new SqlParameter("@UID",Model.UID),
+            });
+        }
         public DataTable LoginByUserCodePasswordReturnModel(String UserCode, String Password)
         {
             String sql = "SELECT * FROM Users WHERE UCode=@UserCode AND uPwd=@Password";

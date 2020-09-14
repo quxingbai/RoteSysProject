@@ -25,7 +25,10 @@ namespace RoteSysProject.BLL
         {
             return DAL.DeleteByID(ID);
         }
-
+        public int UpdatePasswordByID(UsersModel Model)
+        {
+            return DAL.UpdatePasswordByID(Model);
+        }
         public DataTable LoginByUserCodePasswordReturnModel(String Code, String Password)
         {
             return DAL.LoginByUserCodePasswordReturnModel(Code, Password);

@@ -1,4 +1,6 @@
 ﻿using RoteSysProject.BLL;
+using RoteSysProject.Model;
+using RoteSysProject.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +35,21 @@ namespace RoteSysProject.Form
             else if (e.CommandName == "UPDATE")
             {
                 Response.Redirect("UsersUpdate.aspx?UID=" + UID);
+            }else if(e.CommandName== "RANDOM_UPDATEPASSWORD")
+            {
+                String NewPWD = "";
+                Random rd = new Random();
+                UsersModel user = usersBLL.ToModel(usersBLL.SelectByID(UID))[0];
+                for (int f = 0; f < 6; f++)
+                {
+                    NewPWD += Convert.ToChar(rd.Next('A', 'z'));
+                }
+                NewPWD += UID;
+                Boolean IsSend = false;
+                if(usersBLL.UpdatePasswordByID(new UsersModel() { UID = UID, uPwd = NewPWD }) > 0){
+                    IsSend=Tool.SendEmail(user.UCode, "密码已重置", "新密码：" + NewPWD);
+                }
+                this.ClientScript.RegisterClientScriptBlock(GetType(), "script", "<script>alert('"+(IsSend?"新的密码已发送":"密码发送失败")+"')</script>");
             }
         }
     }
